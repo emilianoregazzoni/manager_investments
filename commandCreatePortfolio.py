@@ -4,10 +4,6 @@ from portfolio import Portfolio
 import click
 from engine import engine
 
-@click.group()
-def cli():
-    pass
-
 @click.command(help= "Create a new portfolio")
 @click.option("--name", prompt=True)
 @click.option("--description", prompt=True)

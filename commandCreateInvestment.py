@@ -6,10 +6,6 @@ import click
 from engine import engine
 from investment import Investment
 
-@click.group()
-def cli():
-    pass
-
 @click.command(help= "Create an investment and add it to a portfolio")
 @click.option("--coin", prompt=True)
 @click.option("--currency", prompt=True)

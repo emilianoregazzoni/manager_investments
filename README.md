@@ -1,4 +1,4 @@
-# Manager investments
+# Manager investments :moneybag:
 Cli command developed in Python, using SQLAlchemy and CoinGecko API to manage the investments of portfolios getting live information about cryptocurrencies
 
 ## __Python, SQLAlchemy and Coingecko__  
@@ -25,3 +25,5 @@ def get_coin_prices(coins, currencies):
 
    return data
 ```
+
+

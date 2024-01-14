@@ -3,11 +3,16 @@ from typing import List
 from sqlalchemy import String, Numeric, create_engine, select, Text, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session, relationship
 from portfolio import Portfolio
-
+from sqlalchemy import create_engine
+from base import Base
 import click
-from engine import engine
 from getPrices import get_coin_prices
- 
+from engine import engine
+
+
+engine = create_engine("sqlite:///demo_r.db")
+Base.metadata.create_all(engine)
+
 @click.command(help= "View the investments in a portfolio")
 def view_portfolio():
     with Session(engine) as session:
